@@ -1,7 +1,7 @@
-const mongoose = require('mongoose')
-const { connect,model,Schema } = mongoose
-
 module.exports = app => {
+    const mongoose = require('mongoose');
+    const { connect } = mongoose;
+
     connect('mongodb://localhost:27017/moba', {
         useNewUrlParser: true,
         useUnifiedTopology: true,

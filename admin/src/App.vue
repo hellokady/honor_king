@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "app",
+  name: "app"
 };
 </script>
 
@@ -19,6 +19,9 @@ body {
   height: 100%;
 }
 #app > .el-container {
-  height: 100%!important;
+  height: 100% !important;
+}
+#app > .el-container > .el-aside {
+  overflow-x: hidden !important;
 }
 </style>
