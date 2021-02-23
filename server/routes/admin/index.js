@@ -110,6 +110,18 @@ module.exports = app => {
         })
     })
 
+    //  注册接口
+    app.post('/admin/api/register', async(req, res) => {
+        const userInfo = req.body;
+        assert(userInfo, 422, "请完善注册信息");
+        const AdminUser = require('../../modules/AdminUser');
+        await AdminUser.create(userInfo);
+        res.send({
+            success: true,
+            message: '注册成功'
+        })
+    })
+
     // 退出登录
     app.post('/admin/api/loginout', async(req, res) => {
         res.send({
